@@ -1,4 +1,4 @@
-const {DBService, DB} = require('../DB/dbservice');
+const DBService = require('../DB/db_service');
 
 // GET ALL DATA
 const All_Data = async (req,res)=>{

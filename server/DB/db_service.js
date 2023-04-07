@@ -1,13 +1,4 @@
-const mysql = require('mysql');
-require('dotenv').config();
-
-const DB = mysql.createConnection({
-    host: process.env.DATABASE_HOST,
-    user: process.env.DATABASE_USER,
-    password: process.env.DATABASE_PASSWORD,
-    database: process.env.DATABASE,
-    port: process.env.DB_PORT
-});
+const DB = require('./db_connect.js');
 
 let instance = null;
 class DBService {
@@ -90,5 +81,5 @@ class DBService {
     }
 }
 
-module.exports = {DB, DBService}; 
+module.exports = DBService; 
 
